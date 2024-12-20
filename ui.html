@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalize Stroke</title>
+</head>
+<body>
+    <h1>Normalize Stroke Width</h1>
+    <input type="number" id="strokeWidth" placeholder="Enter stroke width" />
+    <button id="apply">Apply</button>
+    <script>
+        document.getElementById('apply').onclick = () => {
+            const strokeWidth = document.getElementById('strokeWidth').value;
+            parent.postMessage({ pluginMessage: { type: 'set-stroke', strokeWidth } }, '*');
+        };
+    </script>
+</body>
+</html>
